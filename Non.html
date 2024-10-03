@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Je comprends</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="no-message">Je comprends</h1>
+        <p>Je comprends si tu ne veux pas qu'on soit les meilleures amies du monde. Ce n'est pas grave, cela ne changera rien à ce que nous avons construit jusqu'à présent. Sache que je t'aimerai toujours, peu importe la forme que prendra notre amitié.</p>
+    </div>
+
+    <!-- Animation de bulles -->
+    <div class="bubbles">
+        <span class="bubble"></span>
+        <span class="bubble"></span>
+        <span class="bubble"></span>
+    </div>
+
+    <style>
+        .no-message {
+            color: #757575;
+            font-size: 2.5em;
+            animation: fadeIn 2s ease-out;
+        }
+
+        /* Animation des bulles */
+        .bubbles {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 15px;
+        }
+
+        .bubble {
+            width: 50px;
+            height: 50px;
+            background-color: #B5FFFC;
+            border-radius: 50%;
+            animation: riseUp 10s infinite ease-in-out;
+        }
+
+        @keyframes riseUp {
+            0% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-300px);
+                opacity: 0;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</body>
+</html>

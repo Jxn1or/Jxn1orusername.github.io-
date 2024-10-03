@@ -1,0 +1,110 @@
+/* BODY AND BACKGROUND ANIMATION */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   width: auto;
+    background: linear-gradient(135deg, #FFDF96 0%, #B5FFFC 100%);
+    animation: gradient 5s infinite;
+    font-family: 'Arial', sans-serif;
+}
+
+#FFDEE9
+.carousel{
+    overflow: hidden;
+    width: 600px;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrap{
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 250px;
+    justify-items: stretch;
+    animation: slide 20s  linear infinite ;
+}
+
+.wrap img{
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+@keyframes slide {
+    to {
+       translate: calc(-4 * 250px);
+    }
+}
+
+/* CONTAINER */
+.container {
+    text-align: center;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+    position: cover;
+    width: 60%;
+    min-height: 60vh;
+    backdrop-filter: brightness(0.8);
+}
+
+/* BOUNCE ANIMATION FOR HAPPY BIRTHDAY */
+.birthday-message {
+    font-size: 3em;
+    color: #ffd165 ;
+    margin-bottom: 20px;
+    animation: bounce 4s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
+/* TYPEWRITER EFFECT FOR TEXT */
+.typewriter h2 {
+    overflow: hidden; 
+    border-right: .15em solid #333; 
+    white-space: nowrap; 
+    letter-spacing: .15em; 
+    animation: typing 3.5s steps(30, end), blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #333 }
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: #ffc849;
+    color: #000000;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #ffc849;
+}
